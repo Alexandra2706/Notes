@@ -1,0 +1,16 @@
+{
+    "notes" : [
+        {
+        "title" : "work",
+        "author" : "Peter",
+        "text" : "read book",
+        "data" : "2024-03-03 12:30:15"
+    },
+    {
+        "title" : "work2",
+        "author" : "Peter",
+        "text" : "walk",
+        "data" : "2024-03-03 12:30:34"
+    }
+    ]
+}
