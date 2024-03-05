@@ -20,6 +20,7 @@ schema = {
 
 
 def parse_json(templates: dict) -> ListNotes:
+    ''' Переобразует json в объект Note'''
     notes = ListNotes()
     try:
         if 'notes' not in templates:

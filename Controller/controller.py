@@ -1,4 +1,3 @@
-from Exceptions.exception import ObjectExistsException
 from Model.listNotes import ListNotes
 from Model.note import Note
 from Service.processNote import create_note, delete_note, edit_note
@@ -49,12 +48,12 @@ def get_menu() -> None:
                 print("Нет заметок для редактирования")
             else:
                 edit_note(notes)
-        elif point == '7':  # удалить
+        elif point == '7':
             if not notes:
                 print("Нет заметок для удаления")
             else:
                 delete_note(notes)
-        elif point == '8':  # сохр изменения
+        elif point == '8':
             print(notes)
         elif point == '0':
             end = True
