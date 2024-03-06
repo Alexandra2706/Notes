@@ -11,7 +11,7 @@ from Model.note import Note
 schema = {
     "type": "object",
     "properties": {
-        "title": {"type": "string"},
+        "id": {"type": "number"},
         "author": {"type": "string"},
         "text": {"type": "string"},
         "data": {"type": "string"},
@@ -51,7 +51,7 @@ def file_write(filename: str, list_notes: ListNotes) -> None:
     ''' Запись в json файл '''
     list_dict = []
     for obj in list_notes.get_notes():
-        list_dict.append({'title': getattr(obj, 'title'), 'author': getattr(obj, 'author'),
+        list_dict.append({'id':  getattr(obj, 'id'), 'title': getattr(obj, 'title'),
                           'text': getattr(obj, 'text'), 'data': getattr(obj, 'data')})
     to_json = {'notes': list_dict}
     try:

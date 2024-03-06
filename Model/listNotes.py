@@ -16,15 +16,11 @@ class ListNotes:
         return self.list_notes
 
     def print_titles(self) -> None:
-        id = 0
         for note in self.list_notes:
-            print(f'id: {id} - {getattr(note, "title")}')
-            id += 1
+            print(f'id: {getattr(note, "id")} - {getattr(note, "title")}')
 
     def __repr__(self) -> str:
         list_to_str = ''
-        id = 0
         for note in self.list_notes:
-            list_to_str += f'id: {id}\n{note}\n'
-            id += 1
+            list_to_str += f'{note}\n'
         return list_to_str
