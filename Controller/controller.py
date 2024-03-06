@@ -39,7 +39,10 @@ def get_menu() -> None:
             else:
                 notes = ListNotes()
         elif point == '3':
-            save_list_notes(notes)
+            if isinstance(notes, type(None)):
+                print('Нет заметок для сохранения')
+            else:
+                save_list_notes(notes)
         elif point == '4':
             answer = input('Вы уверены? [y/N]: ')
             if answer == 'y':
@@ -72,7 +75,10 @@ def get_menu() -> None:
             else:
                 search_by_id(notes)
         elif point == '10':
-            print(notes)
+            if isinstance(notes, type(None)) or len(notes.get_notes()) == 0:
+                print('Список заметок пуст')
+            else:
+                print(notes)
         elif point == '0':
             end = True
         else:
